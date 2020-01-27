@@ -1,0 +1,9 @@
+---
+-hosts: all
+ become: true
+ vars:
+   packages: ['vim', 'git', 'curl']
+ tasks:
+  -name: Install package
+  apt: name= {{item}} state=latest
+  with_items: "{{packages}}"
