@@ -1,0 +1,10 @@
+---
+-hosts: all
+ vars:
+  variable1: 'Hello World'
+  variable2: 'How are you'
+ tasks:
+  - name: 'Basic Template Example'
+  - template: 
+      src: <Enter the source file> 
+      dst: <Enter the destination file to be saved>
